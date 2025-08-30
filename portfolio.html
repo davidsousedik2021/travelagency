@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mé portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .image {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .details {
+            display: none;
+            position: absolute;
+            left: 220px;
+            top: 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Hlavička -->
+    <header>
+        <h1>Cestovní kancelář</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Kypr</a></li>
+                <li><a href="#">Francie</a></li>
+                <li><a href="#">Gruzie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main page -->
+    <main>
+        <h2>O nás</h2>
+        <p>Nabízíme skvělé zážitky</p>
+        <div class="container">
+            <img src="kypr.jpg" class="image" id="image">
+            <div class="details" id="details">
+                <p><strong>Název:</strong>Kypr</p>
+                <p><strong>Velikost:</strong>1000</p>
+                <p><strong>Popis:</strong>Výhled na moře</p>
+            </div>
+        </div>
+
+    </main>
+    <!-- Patička -->
+    <footer>
+        <p>&copy; 2025 David Sousedik</p>
+    </footer>
+
+    <script>
+        const image = document.getElementById("image");
+        const details = document.getElementById("details");
+
+        image.addEventListener("mouseenter", () => {
+            details.style.display = "block"; 
+        });
+
+        image.addEventListener("mouseleave", () => {
+            details.style.display = "none";
+        });
+
+    </script>
+
+
+</body>
+
+</html>
